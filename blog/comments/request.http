@@ -1,13 +1,12 @@
 ### getting comments
 
-GET http://localhost:4001/posts/1/comments
-
+GET  http://localhost:4001/posts/13/comments
 
 ### posting comments
 
-POST  http://localhost:4001/posts/11/comments
+POST  http://localhost:4001/posts/13/comments
 Content-Type: application/json
 
 {
-    "content": "på en råta här vi skickar räven"
+    "content": "shu från 1212"
 }
