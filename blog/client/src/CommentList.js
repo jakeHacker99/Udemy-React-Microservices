@@ -6,8 +6,7 @@ import axios from 'axios'
 const CommentList = ({postId}) => {
     const [comments, setComments] = useState([])
      const fetchData = async () => {
-        const res = await axios.get(`http://localhost:4001/posts/${postId} /comments`);
-        
+        const res = await axios.get(`http://localhost:4001/posts/${postId}/comments`);
         setComments(res.data)
     };
     useEffect(() => {
@@ -15,15 +14,16 @@ const CommentList = ({postId}) => {
     }, [])
     
   
-    const renderedComments = comments.map(comment => {
-        return <li key={comment.id} > {comment.content} </li>
-    })
+    const renderedComments = comments.length > 0 ? comments.map(comment => {
+
+        return <li key={comment.id}>{comment.content}</li>;
+    
+      }) : <span>no comments</span>;
     
     return (
-        <ul>
-            {renderedComments}
-            
-        </ul>
+            <ul>
+                {renderedComments}
+            </ul>
     )
 }
 
