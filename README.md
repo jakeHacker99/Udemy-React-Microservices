@@ -14,6 +14,10 @@ Microservices with Node JS and React
 ```
 Status: WIP ⌛
 
+
+log :
+today i worked on docker appendix approx 2h left
+
 ```
 
 
