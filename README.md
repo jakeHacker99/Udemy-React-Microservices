@@ -16,7 +16,7 @@ Status: WIP ⌛
 
 
 log :
-today i worked on docker appendix approx 2h left
+27/8 I worked on docker appendix approx 2h left
 
 ```
 
