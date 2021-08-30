@@ -1,17 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: posts-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: posts
-  template: 
+  template:
     metadata:
-      labels: 
+      labels:
         app: posts
     spec:
-      containers: 
+      containers:
         - name: posts
           image: 12an/posts
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-cluserup-src
+spec:
+  selector:
+    app: posts
+  ports:
+    - name: posts
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

@@ -23,7 +23,7 @@ app.post("/posts", async (req, res) => {
     title,
   };
 
-  await axios.post("http://localhost:4005/events", {
+  await axios.post("http://posts-cluserup-src:4005/events", {
     type: "PostCreated",
     data: {
       id,
@@ -41,7 +41,5 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("v55")
-  console.log("author:   ░1░2░a░n░")
-  console.log("\x1b[34m","Listening on 4000");
+  console.log("Listening on 4000");
 });
