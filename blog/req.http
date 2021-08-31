@@ -1,0 +1,8 @@
+
+### shu katt
+POST http://localhost:32214/posts
+Content-Type: application/json
+
+{
+"title": "POST"
+}
